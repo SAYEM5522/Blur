@@ -1,0 +1,359 @@
+/* body {
+  height: 100vh;
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
+  background-image: url("assets/dil-F35EmcotWPY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  text-align: center;
+} */
+
+body {
+  margin: 0;
+  border-radius: 5px;
+ 
+}
+.header{
+  height: 40px;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+}
+
+.blur-element {
+  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-minmax {
+  margin-top: 10px;
+  width: 265px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: black;
+}
+
+.box-minmax span:first-child {
+  margin-left: 1px;
+}
+
+.rs-range {
+  margin-top: 20px;
+  width: 265px;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: black;
+  background-color: black;
+}
+
+.rs-range:focus {
+  outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+   background-color: black;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+   background-color: black;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 22px;
+  width: 12px;
+  border-radius: 22px;
+  background-color: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+.rs-range::-moz-range-thumb {
+  box-shadow: none;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 22px;
+  width: 12px;
+  border-radius: 22px;
+  background-color: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+.rs-range::-moz-focus-outer {
+  border: 0;
+}
+
+.rs-label {
+  position: relative;
+  transform-origin: center center;
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-left: -16px;
+  left: attr(value);
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+}
+
+.rs-label::after {
+  content: "level";
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  margin-top: -2px;
+}
+
+#my-card {
+  /* background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
+  background-color:white;
+  padding-bottom: 10px;
+  width: 320px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: inline-block;
+  
+  /* height: 450px; */
+}
+
+#my-card-container {
+  padding: 0px 10px;
+}
+
+#demo-container {
+  text-align: center;
+  padding: 22px 0px 12px 0px;
+
+}
+
+#demo-container img {
+  height: 165px;
+  width: 290px;
+  margin-top: -15px;
+}
+
+#menu-desc-container {
+  text-align: center;
+  margin: 10px 10px;
+  color: white;
+  font-size: 18px;
+  background-color: black;
+  width: fit-content;
+  
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px !important;
+
+}
+
+#menu-des {
+  justify-content: center;
+}
+
+#menu-container {
+  text-align: center;
+  width: 97%;
+  height: 65px;
+  background-color: #010101;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: black;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+  padding: 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  outline: none;
+}
+
+#imageTest {
+  margin-top: 10px;
+}
+
+.button img {
+  height: 100%;
+  filter: invert(1);
+}
+
+svg {
+  width: 20px;
+  max-height: 22px;
+  color: white;
+}
+
+#cursor-blur:hover,
+#remove-blur:hover,
+#exit-blur:hover {
+  transform: scale(1.1);
+}
+
+.clicked-menu-bg {
+  background-color: #F79136;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+#support-us-container {
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#support-us-title {
+  width: 100%;
+  margin: 6px;
+}
+
+#support-us-detail {
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: url("../assets/heart-emoji.png"), auto;
+  width: 50px;
+  height: 50px;
+}
+
+#support-us-detail:hover {
+  text-decoration: underline;
+}
+
+/* #bg-text {
+  color: black;
+  font-weight: bold;
+  border: 2px solid #f1f1f1;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+} */
+
+#bg-text h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+#bg-text p {
+  font-size: 16px;
+}
+.my_home_card{
+  height: 450px;
+  width: 320px;
+}
+.home_menue{
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.home_input{
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 65%;
+  font-size: 16px;
+  
+
+}
+.home_email{
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 65%;
+  font-size: 16px;
+}
+.home_email::placeholder{
+  font-size: 17px;
+  padding-left: 5px;
+}
+.home_input::placeholder{
+  font-size: 17px;
+  padding-left: 5px;
+}
+.home_button{
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+
+}
+.home_text{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 10px;
+  width: 60%;
+  color:#F79136;
+}

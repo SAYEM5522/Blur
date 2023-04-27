@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blurry</title>
+    <link rel="stylesheet" type="text/css" href="./popup.css" />
+  </head>
+
+  <body>
+    
+    <div data-ig="true" id="my-card">
+      <div data-ig="true" id="my-card-container">
+        <div class="header">
+          <p>Blur Your Screen </p>
+        </div>
+        <div data-ig="true" id="demo-container">
+          <img
+            data-ig="true"
+            id="imageTest"
+            src="./b1.png"
+            alt="Blur picture example"
+            class="blur-element"
+          />
+          <div id="bg-text">
+          </div>
+        </div>
+
+        <div data-ig="true" class="container">
+          <div data-ig="true" class="range-slider">
+            <span data-ig="true" id="rs-bullet" class="rs-label">0</span>
+            <input
+              data-ig="true"
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="22"
+              min="0"
+              max="100"
+            />
+          </div>
+
+          <div data-ig="true" class="box-minmax">
+            <span>0</span><span>10</span>
+          </div>
+        </div>
+
+        <div data-ig="true" id="menu-desc-container">
+          <span data-ig="true" id="menu-desc">Active Blur</span>
+        </div>
+
+        <div data-ig="true" id="menu-container">
+          <button
+            data-ig="true"
+            data-name="Active Blur"
+            id="cursor-blur"
+            class="enableEvent button"
+          >
+        
+            <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16"> <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z" fill="white"></path> </svg>
+
+
+
+          </button>
+          <button
+            data-ig="true"
+            data-name="Remove Blur"
+            id="remove-blur"
+            class="removeAllBlur button"
+          >
+            
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+              <rect width="320" height="320" fill="none"/>
+              <line x1="91.5" y1="99.5" x2="159.4" y2="167.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"/>
+              <path d="M216,215.8H72.1L35,178.7a15.9,15.9,0,0,1,0-22.6L148.1,43a15.9,15.9,0,0,1,22.6,0L216,88.2a16.2,16.2,0,0,1,0,22.7L111,215.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"/>
+            </svg>
+          </button>
+
+          <button
+            data-ig="true"
+            data-name="Exit Blur"
+            id="exit-blur"
+            class="removeAllBlur button"
+          >
+            <svg
+              data-ig="true"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="times"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+            >
+              <path
+                fill="currentColor"
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                class=""
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div  id="my-home" class="my_home_card">
+      <div class="header">
+        <p>Blur Your Screen </p>
+      </div>
+      <div>
+        <p class="home_text">
+          Please Enter Your Email and Code To Open The App
+        </p>
+      </div>
+      <div class="home_menue">
+        <input
+        class="home_email"
+        type="email"
+        placeholder="Enter Your Email..."
+        />
+      </div>
+      <div class="home_menue">
+        <input
+        class="home_input"
+        type="text"
+        placeholder="Enter Your Code..."
+        />
+      </div>
+      <button class="home_button">Open</button>
+    
+     
+    </div>
+   
+    <script src="./popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Blurrify",
+  "version": "1.0.0",
+  "description": "Blur content on any webpage with the customized blur level",
+ 
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+ 
+  "background":{
+    "service_worker":"background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["contentScript.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "manifest_version": 3
+}
