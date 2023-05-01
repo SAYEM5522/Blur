@@ -309,44 +309,89 @@ img {
 }
 .home_menue{
   display: flex;
-  align-items: center;
-  padding-top: 5px;
-  padding-left: 10px;
+  flex-direction: column;
+}
+.home_menue2{
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
 }
 .home_input{
   height: 20px;
-  padding: 10px;
+  padding: 9px;
   border-radius: 5px;
-  width: 65%;
+  width: 80%;
   font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  background-color: #40758A;
+  color: white;
+  border: transparent;
+  outline: 0px;
   
 
 }
 .home_email{
   height: 20px;
-  padding: 10px;
+  padding: 9px;
   border-radius: 5px;
-  width: 65%;
+  width: 80%;
   font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  background-color: #40758A;
+  color: white;
+  border: transparent;
+  outline: 0px;
+  
+
 }
 .home_email::placeholder{
   font-size: 17px;
   padding-left: 5px;
+  color: white;
 }
 .home_input::placeholder{
   font-size: 17px;
   padding-left: 5px;
+  color: white;
 }
 .home_button{
   padding: 10px;
-  margin-left: 10px;
   font-size: 18px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 500;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 87%;
+  margin-left: 25px;
+  background-color: #40758A;
+  border: transparent;
+  color: white;
 
+}
+.get_button{
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 87%;
+  margin-left: 25px;
+  background-color: #40758A;
+  border: transparent;
+  color: white;
+}
+.header_code{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#F79136;
+  text-align: center;
 }
 .home_text{
   margin-top: 10px;
@@ -356,4 +401,23 @@ img {
   margin-left: 10px;
   width: 60%;
   color:#F79136;
+}
+.header_img{
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.header{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+.header_i_t{
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  padding: 0px 25px;
 }

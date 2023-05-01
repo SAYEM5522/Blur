@@ -4,7 +4,14 @@ const myHome = document.getElementById("my-home");
 const inputField = document.querySelector(".home_input");
 const inputEmail = document.querySelector(".home_email");
 
+
 const openButton = document.querySelector(".home_button");
+const codeButton = document.querySelector(".get_button");
+codeButton.addEventListener("click", function() {
+  chrome.tabs.create({ url: "https://buy.stripe.com/7sIeY0dY6fwt01y14d" });
+  // window.location.replace("");
+});
+
   let open = false;
 openButton.addEventListener("click", () => {
   const code = inputField.value;

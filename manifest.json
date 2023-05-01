@@ -7,6 +7,12 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "icons": {
+    "16": "h.jpeg",
+    "32": "h.jpeg",
+    "48": "h.jpeg",
+    "128": "h.jpeg"
+  },
  
   "background":{
     "service_worker":"background.js"
