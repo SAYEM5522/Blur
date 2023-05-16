@@ -1,7 +1,7 @@
 {
   "name": "Blurrify",
-  "version": "1.0.0",
-  "description": "Blur content on any webpage with the customized blur level",
+  "version": "1.0.1",
+  "description": "Blur Your Sensitive Information",
  
   "permissions": ["activeTab", "storage"],
   "action": {

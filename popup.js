@@ -3,16 +3,19 @@ const myCard = document.getElementById("my-card");
 const myHome = document.getElementById("my-home");
 const inputField = document.querySelector(".home_input");
 const inputEmail = document.querySelector(".home_email");
-
-
 const openButton = document.querySelector(".home_button");
 const codeButton = document.querySelector(".get_button");
+const AppsumoButton = document.querySelector(".home_input_appsumo");
+const AppsumoOpenButton = document.querySelector(".home_button2");
+
+
+
 codeButton.addEventListener("click", function() {
   chrome.tabs.create({ url: "https://buy.stripe.com/7sIeY0dY6fwt01y14d" });
   // window.location.replace("");
 });
 
-  let open = false;
+let open = false;
 openButton.addEventListener("click", () => {
   const code = inputField.value;
   const email=inputEmail.value
@@ -31,6 +34,40 @@ openButton.addEventListener("click", () => {
     location.reload();
   } else {
     alert('Invalid Code. Please Provide A Valid Code.');
+  }
+})
+  .catch(error => console.error(error));
+  
+  // Do something with the code, e.g. open a page or execute some code
+});
+AppsumoOpenButton.addEventListener("click", () => {
+  const appcode = AppsumoButton.value;
+
+  fetch('https://blurrifyco.onrender.com/appsumo')
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.length; i++) {
+    if (appcode === data[i].code ) {
+      if(data[i].turn>0){
+        open = true;
+        fetch(`https://blurrifyco.onrender.com/appsumo/${appcode}`,{method:"PUT"}).
+        then(response => response.json()).then(data=>{
+        console.log(data)
+        }).catch((err)=>{
+          console.log(err)
+        })
+      }else{
+        alert('Your Appsumo Trial Credit Has Finished');
+
+      }
+      break;
+    }
+  }
+  if (open) {
+    chrome.storage.sync.set({ code: true }, function () {});
+    location.reload();
+  } else {
+    alert('Invalid Appsumo Code. Please Provide A Valid Code.');
   }
 })
   .catch(error => console.error(error));
