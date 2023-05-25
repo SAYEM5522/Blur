@@ -76,8 +76,8 @@ AppsumoOpenButton.addEventListener("click", () => {
 });
 
 
-chrome.storage.sync.get("code", function (data) {
-  if (data.code) {
+// chrome.storage.sync.get("code", function (data) {
+  // if (data.code) {
     let blurLevel = 8;
     let menuDesc = document.querySelector("#menu-desc");
     let enableEvent = document.querySelector("#cursor-blur");
@@ -205,10 +205,11 @@ chrome.storage.sync.get("code", function (data) {
     myCard.style.display = "block";
     myHome.style.display = "none";
     
-  } else {
-    myCard.style.display = "none";
-    myHome.style.display = "block";
-  }
-});
+  // } 
+  // else {
+  //   myCard.style.display = "none";
+  //   myHome.style.display = "block";
+  // }
+// });
 
 
